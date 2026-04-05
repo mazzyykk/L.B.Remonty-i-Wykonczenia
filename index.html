@@ -1,0 +1,1814 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ł.B Remonty i Wykończenia | Łukasz Będkowski – Wrocław</title>
+<meta name="description" content="Profesjonalne remonty i wykończenia wnętrz we Wrocławiu. 22 lata doświadczenia. Zadzwoń: +48 570 038 144">
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --orange:#F97316;--orange-dark:#EA580C;--orange-light:#FED7AA;
+  --black:#0F0F0F;--dark:#1C1C1E;--gray:#6B7280;--gray-light:#F5F5F5;
+  --white:#FFFFFF;--border:#E5E7EB;
+  --shadow:0 4px 24px rgba(0,0,0,0.08);--shadow-lg:0 16px 48px rgba(0,0,0,0.14);
+  --radius:12px;--radius-lg:20px;
+  --font-display:'Barlow Condensed',sans-serif;--font-body:'DM Sans',sans-serif;
+  --tr:0.3s cubic-bezier(0.4,0,0.2,1);
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--dark);background:var(--white);overflow-x:hidden;line-height:1.6}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+::selection{background:var(--orange);color:#fff}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:#f1f1f1}
+::-webkit-scrollbar-thumb{background:var(--orange);border-radius:3px}
+h1,h2,h3,h4{font-family:var(--font-display);line-height:1.1;letter-spacing:-0.01em}
+.section-label{display:inline-flex;align-items:center;gap:8px;font-size:0.78rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--orange);margin-bottom:12px}
+.section-label::before{content:'';display:block;width:24px;height:2px;background:var(--orange)}
+.section-title{font-size:clamp(2rem,5vw,3.4rem);font-weight:800;color:var(--black);margin-bottom:16px}
+.section-sub{font-size:1rem;color:var(--gray);max-width:520px;line-height:1.7}
+
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:50px;font-family:var(--font-body);font-size:0.95rem;font-weight:600;cursor:pointer;border:none;position:relative;overflow:hidden;transition:var(--tr);white-space:nowrap;text-decoration:none}
+.btn-primary{background:var(--orange);color:#fff;box-shadow:0 4px 20px rgba(249,115,22,0.4)}
+.btn-primary:hover{background:var(--orange-dark);transform:translateY(-2px);box-shadow:0 8px 28px rgba(249,115,22,0.5)}
+.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.7)}
+.btn-outline:hover{background:rgba(255,255,255,0.15);border-color:white;transform:translateY(-2px)}
+.btn-dark{background:var(--black);color:#fff}
+.btn-green{background:#25D366;color:#fff;box-shadow:0 4px 20px rgba(37,211,102,0.35);}
+.btn-green:hover{background:#1ebe58;transform:translateY(-2px);}
+.btn-dark:hover{background:var(--dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.25)}
+.btn-lg{padding:18px 36px;font-size:1.05rem}
+.btn::after{content:'';position:absolute;inset:0;background:white;border-radius:inherit;opacity:0;transform:scale(0);transition:transform 0.4s,opacity 0.4s;pointer-events:none}
+.btn:active::after{opacity:0.15;transform:scale(2.5);transition:0s}
+
+/* NAVBAR */
+#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 5%;transition:background 0.4s,box-shadow 0.4s;background:transparent}
+#navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);box-shadow:0 2px 20px rgba(0,0,0,0.1)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;max-width:1280px;margin:0 auto}
+.nav-logo{display:flex;align-items:center;gap:10px}
+.nav-logo-img{width:46px;height:46px;border-radius:50%;object-fit:cover;flex-shrink:0;transition:transform 0.3s}
+.nav-logo-img:hover{transform:scale(1.08)}
+.nav-logo-name{font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:#fff;transition:color 0.3s;display:block;line-height:1.15}
+.nav-logo-sub{font-size:0.7rem;font-weight:400;color:rgba(255,255,255,0.7);transition:color 0.3s;display:block}
+#navbar.scrolled .nav-logo-name{color:var(--black)}
+#navbar.scrolled .nav-logo-sub{color:var(--gray)}
+.nav-links{display:flex;align-items:center;gap:2px;list-style:none}
+.nav-links a{display:block;padding:8px 14px;font-size:0.9rem;font-weight:500;color:rgba(255,255,255,0.88);border-radius:8px;transition:var(--tr)}
+.nav-links a:hover{color:white;background:rgba(255,255,255,0.12)}
+#navbar.scrolled .nav-links a{color:var(--dark)}
+#navbar.scrolled .nav-links a:hover{color:var(--orange);background:var(--gray-light)}
+.nav-cta a{padding:10px 20px;font-size:0.88rem}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;border-radius:8px;background:rgba(255,255,255,0.1);border:none}
+.hamburger span{display:block;width:22px;height:2px;background:white;border-radius:2px;transition:var(--tr)}
+#navbar.scrolled .hamburger{background:var(--gray-light)}
+#navbar.scrolled .hamburger span{background:var(--dark)}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;position:fixed;top:72px;left:0;right:0;background:white;z-index:999;padding:20px 5%;border-bottom:1px solid var(--border);box-shadow:0 8px 30px rgba(0,0,0,0.1)}
+.mobile-menu.open{display:block}
+.mobile-menu ul{list-style:none}
+.mobile-menu a{display:block;padding:14px 0;font-size:1.05rem;font-weight:500;color:var(--dark);border-bottom:1px solid var(--border);transition:color 0.2s}
+.mobile-menu a:hover{color:var(--orange)}
+.mobile-menu .btn{display:flex;margin-top:20px;justify-content:center}
+
+/* HERO */
+#hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.4) 60%,rgba(249,115,22,0.12) 100%),url('https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=1800&q=85&auto=format&fit=crop') center/cover no-repeat;will-change:transform}
+.hero-bg::after{content:'';position:absolute;bottom:0;left:0;right:0;height:160px;background:linear-gradient(to top,white,transparent)}
+.hero-content{position:relative;z-index:2;max-width:1280px;margin:0 auto;padding:120px 5% 80px;width:100%}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(249,115,22,0.18);border:1px solid rgba(249,115,22,0.45);color:#FDBA74;font-size:0.8rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:6px 14px;border-radius:50px;margin-bottom:28px;opacity:0;transform:translateY(20px);animation:fadeUp 0.7s 0.2s forwards}
+.hero-badge-dot{width:7px;height:7px;background:var(--orange);border-radius:50%;animation:pulse 2s infinite;flex-shrink:0}
+.hero-title{font-size:clamp(2.8rem,7.5vw,6.5rem);font-weight:900;color:white;text-transform:uppercase;max-width:820px;line-height:1.0;margin-bottom:24px;opacity:0;transform:translateY(30px);animation:fadeUp 0.8s 0.35s forwards}
+.hero-title span{color:var(--orange)}
+.hero-sub{font-size:clamp(1rem,2vw,1.2rem);color:rgba(255,255,255,0.82);max-width:520px;line-height:1.7;margin-bottom:40px;opacity:0;transform:translateY(30px);animation:fadeUp 0.8s 0.5s forwards}
+.hero-btns{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:56px;opacity:0;transform:translateY(30px);animation:fadeUp 0.8s 0.65s forwards}
+.hero-stats{display:flex;flex-wrap:wrap;gap:36px;opacity:0;transform:translateY(20px);animation:fadeUp 0.8s 0.8s forwards}
+.hero-stat-num{font-family:var(--font-display);font-size:2.8rem;font-weight:800;color:white;line-height:1}
+.hero-stat-num span{color:var(--orange)}
+.hero-stat-label{font-size:0.8rem;color:rgba(255,255,255,0.55);margin-top:4px}
+.hero-divider{width:1px;background:rgba(255,255,255,0.15);align-self:stretch}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 3px rgba(249,115,22,0.3)}50%{box-shadow:0 0 0 7px rgba(249,115,22,0.08)}}
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+
+/* TRUST STRIP */
+.trust-strip{background:var(--orange);padding:14px 5%}
+.trust-strip-inner{max-width:1280px;margin:0 auto;display:flex;justify-content:center;gap:40px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:8px;color:white;font-size:0.85rem;font-weight:600}
+.trust-item svg{width:16px;height:16px;flex-shrink:0}
+
+/* SECTIONS */
+section{padding:88px 5%}
+.container{max-width:1280px;margin:0 auto}
+
+/* =============================================
+   TASK 3: SERVICES TABS
+   ============================================= */
+#uslugi{background:var(--gray-light)}
+.services-tabs{margin-top:48px}
+
+/* Mobile select */
+.tabs-mobile-select{display:none;margin-bottom:24px}
+.tabs-mobile-select select{
+  width:100%;padding:14px 18px;
+  border:2px solid var(--border);border-radius:var(--radius);
+  font-family:var(--font-body);font-size:1rem;font-weight:600;
+  color:var(--dark);background:white;
+  appearance:none;-webkit-appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F97316' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 14px center;background-size:18px;
+  cursor:pointer;outline:none;
+  transition:border-color 0.2s,box-shadow 0.2s;
+}
+.tabs-mobile-select select:focus{border-color:var(--orange);box-shadow:0 0 0 4px rgba(249,115,22,0.1)}
+
+/* Desktop tab buttons */
+.tabs-nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:32px}
+.tab-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 22px;border-radius:50px;
+  font-family:var(--font-body);font-size:0.88rem;font-weight:600;
+  border:2px solid var(--border);background:white;color:var(--gray);
+  cursor:pointer;transition:var(--tr);white-space:nowrap;
+}
+.tab-btn:hover{border-color:var(--orange-light);color:var(--orange-dark);background:var(--orange-light)}
+.tab-btn.active{background:var(--orange);color:white;border-color:var(--orange);box-shadow:0 4px 16px rgba(249,115,22,0.35)}
+.tab-btn svg{width:16px;height:16px;flex-shrink:0}
+
+/* Tab panels */
+.tab-panel{display:none;animation:tabFadeIn 0.35s ease}
+.tab-panel.active{display:block}
+@keyframes tabFadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+.services-tab-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+  gap:12px;
+}
+.service-tab-item{
+  display:flex;align-items:flex-start;gap:12px;
+  background:white;border-radius:var(--radius);
+  padding:16px 18px;border:1px solid var(--border);
+  transition:var(--tr);
+}
+.service-tab-item:hover{
+  border-color:var(--orange-light);
+  box-shadow:0 4px 16px rgba(249,115,22,0.1);
+  transform:translateY(-2px);
+}
+.service-tab-icon{
+  width:36px;height:36px;min-width:36px;
+  background:var(--orange-light);border-radius:9px;
+  display:flex;align-items:center;justify-content:center;
+  transition:background 0.2s;
+}
+.service-tab-item:hover .service-tab-icon{background:var(--orange)}
+.service-tab-icon svg{width:17px;height:17px;color:var(--orange-dark);transition:color 0.2s}
+.service-tab-item:hover .service-tab-icon svg{color:white}
+.service-tab-name{font-family:var(--font-display);font-size:1.08rem;font-weight:700;color:var(--black);margin-bottom:2px;line-height:1.2}
+.service-tab-desc{font-size:0.78rem;color:var(--gray);line-height:1.5}
+
+/* =============================================
+   TASK 1: INFINITE MARQUEE – GALLERY
+   ============================================= */
+#realizacje{background:var(--white);overflow:hidden}
+.gallery-track-wrapper{
+  overflow:hidden;margin:0 -5%;position:relative;margin-top:40px;
+  cursor:pointer;
+}
+.gallery-track-wrapper::before,.gallery-track-wrapper::after{
+  content:'';position:absolute;top:0;bottom:0;width:100px;z-index:2;pointer-events:none;
+}
+.gallery-track-wrapper::before{left:0;background:linear-gradient(to right,white 30%,transparent)}
+.gallery-track-wrapper::after{right:0;background:linear-gradient(to left,white 30%,transparent)}
+
+@keyframes marqueeLeft{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+.gallery-track{
+  display:flex;gap:14px;padding:12px 80px;
+  width:max-content;
+  animation:marqueeLeft 50s linear infinite;
+  will-change:transform;
+}
+/* Pause on wrapper hover */
+.gallery-track-wrapper:hover .gallery-track{
+  animation-play-state:paused;
+}
+/* Scale + glow on individual item hover */
+.gallery-item{
+  flex:0 0 300px;height:220px;border-radius:var(--radius-lg);
+  overflow:hidden;position:relative;
+  transition:transform 0.4s cubic-bezier(0.4,0,0.2,1),
+             box-shadow 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+.gallery-item:hover{
+  transform:scale(1.06);
+  box-shadow:0 0 0 2px rgba(249,115,22,0.5),0 20px 48px rgba(0,0,0,0.22);
+  z-index:3;
+}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s}
+.gallery-item:hover img{transform:scale(1.07)}
+.gallery-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,0.65) 0%,transparent 60%);
+  opacity:0;transition:opacity 0.3s;
+  display:flex;align-items:flex-end;padding:18px;
+}
+.gallery-item:hover .gallery-overlay{opacity:1}
+.gallery-overlay-text{font-family:var(--font-display);font-size:1rem;font-weight:700;color:white}
+
+/* BEFORE/AFTER */
+.ba-section{margin-top:72px}
+.ba-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px;margin-top:36px}
+.ba-card{border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--border)}
+.ba-slider{position:relative;height:260px;overflow:hidden;cursor:ew-resize;user-select:none;-webkit-user-select:none}
+.ba-after,.ba-before{position:absolute;inset:0}
+.ba-after img,.ba-before img{width:100%;height:100%;object-fit:cover}
+.ba-before{clip-path:inset(0 50% 0 0)}
+.ba-divider{position:absolute;top:0;bottom:0;left:50%;width:3px;background:white;transform:translateX(-50%);z-index:3;pointer-events:none}
+.ba-handle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;background:white;border-radius:50%;z-index:4;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(0,0,0,0.25);pointer-events:none}
+.ba-handle svg{color:var(--orange)}
+.ba-labels{position:absolute;bottom:12px;left:0;right:0;display:flex;justify-content:space-between;padding:0 14px;z-index:5;pointer-events:none}
+.ba-label{background:rgba(0,0,0,0.6);color:white;font-size:0.7rem;font-weight:700;padding:4px 10px;border-radius:30px;letter-spacing:0.06em;text-transform:uppercase}
+.ba-info{padding:18px 22px;background:white}
+.ba-info h4{font-family:var(--font-display);font-size:1.15rem;font-weight:700;margin-bottom:4px}
+.ba-info p{font-size:0.82rem;color:var(--gray)}
+
+/* DLACZEGO */
+#dlaczego{background:var(--black);position:relative;overflow:hidden}
+#dlaczego::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(249,115,22,0.1) 0%,transparent 70%);pointer-events:none}
+.dlaczego-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.dlaczego-left .section-label{color:var(--orange)}
+.dlaczego-left .section-title{color:white}
+.dlaczego-left .section-sub{color:rgba(255,255,255,0.6)}
+.dlaczego-cta{margin-top:36px}
+.features-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.feature-item{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius);padding:22px;transition:var(--tr)}
+.feature-item:hover{background:rgba(249,115,22,0.08);border-color:rgba(249,115,22,0.25);transform:translateY(-3px)}
+.feature-icon{width:42px;height:42px;background:rgba(249,115,22,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.feature-icon svg{width:20px;height:20px;color:var(--orange)}
+.feature-title{font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:white;margin-bottom:5px}
+.feature-text{font-size:0.83rem;color:rgba(255,255,255,0.5);line-height:1.6}
+
+/* =============================================
+   TASK 1+2: REVIEWS MARQUEE + FIXLY CORNER
+   ============================================= */
+#opinie{background:var(--gray-light);overflow:hidden}
+.reviews-track-wrapper{
+  overflow:hidden;margin:0 -5%;position:relative;margin-top:44px;
+  cursor:pointer;
+}
+.reviews-track-wrapper::before,.reviews-track-wrapper::after{
+  content:'';position:absolute;top:0;bottom:0;width:100px;z-index:2;pointer-events:none;
+}
+.reviews-track-wrapper::before{left:0;background:linear-gradient(to right,var(--gray-light) 30%,transparent)}
+.reviews-track-wrapper::after{right:0;background:linear-gradient(to left,var(--gray-light) 30%,transparent)}
+
+.reviews-track{
+  display:flex;gap:18px;padding:20px 80px;
+  width:max-content;
+  animation:marqueeLeft 65s linear infinite;
+  will-change:transform;
+}
+.reviews-track-wrapper:hover .reviews-track{
+  animation-play-state:paused;
+}
+
+/* TASK 2: Review card redesign */
+.review-card{
+  flex:0 0 320px;
+  background:white;border-radius:var(--radius-lg);
+  padding:24px;padding-top:20px;
+  border:1px solid var(--border);
+  transition:transform 0.4s cubic-bezier(0.4,0,0.2,1),
+             box-shadow 0.4s cubic-bezier(0.4,0,0.2,1);
+  position:relative;
+  overflow:hidden;
+}
+.review-card::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:3px;
+  background:linear-gradient(to right,var(--orange),var(--orange-dark));
+  transform:scaleX(0);transform-origin:left;transition:transform 0.4s;
+}
+.review-card:hover{
+  transform:scale(1.04) translateY(-5px);
+  box-shadow:0 0 0 2px rgba(249,115,22,0.28),0 24px 52px rgba(0,0,0,0.13);
+  border-color:transparent;
+}
+.review-card:hover::after{transform:scaleX(1)}
+
+/* Fixly badge — positioned top-right corner */
+.fixly-corner{
+  position:absolute;top:16px;right:16px;
+  background:#FFF8DC;border:1px solid rgba(255,200,0,0.4);
+  border-radius:8px;padding:5px 9px;
+  display:flex;align-items:center;gap:5px;
+  transition:var(--tr);
+}
+.review-card:hover .fixly-corner{background:#FFD700;border-color:#DAA520}
+.fixly-corner img{width:18px;height:18px;object-fit:contain}
+.fixly-corner span{font-size:0.68rem;font-weight:800;color:#5a4a00;font-family:sans-serif;letter-spacing:0.06em;text-transform:lowercase}
+
+.review-stars{display:flex;gap:2px;margin-bottom:12px;margin-top:4px}
+.review-text{font-size:0.88rem;color:var(--dark);line-height:1.7;margin-bottom:16px;font-style:italic;padding-right:32px}
+.review-author{display:flex;align-items:center;gap:10px}
+.review-avatar{width:38px;height:38px;border-radius:50%;background:var(--orange-light);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:0.95rem;color:var(--orange-dark);flex-shrink:0}
+.review-name{font-weight:600;font-size:0.86rem;color:var(--black)}
+.review-service{font-weight:400;color:var(--gray);font-size:0.8rem}
+.review-location{font-size:0.77rem;color:var(--gray)}
+.review-date{font-size:0.72rem;color:#9CA3AF;margin-top:2px}
+
+/* FORM */
+#kontakt-form{background:white}
+.form-container{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.cql-items{display:flex;flex-direction:column;gap:12px;margin-top:32px}
+.cql-item{display:flex;align-items:center;gap:14px;padding:16px 20px;background:var(--gray-light);border-radius:var(--radius);transition:var(--tr);font-weight:500;color:var(--dark)}
+.cql-item:hover{background:var(--orange-light);color:var(--orange-dark);transform:translateX(4px)}
+.cql-icon{width:40px;height:40px;background:white;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:var(--shadow)}
+.cql-icon svg{width:17px;height:17px;color:var(--orange)}
+.cql-label{font-size:0.77rem;color:var(--gray);font-weight:400}
+.cql-value{font-size:0.93rem;font-weight:600}
+.contact-form{background:var(--gray-light);border-radius:var(--radius-lg);padding:36px}
+.form-title{font-family:var(--font-display);font-size:1.8rem;font-weight:800;margin-bottom:6px;color:var(--black)}
+.form-subtitle{font-size:0.85rem;color:var(--gray);margin-bottom:24px}
+.form-group{margin-bottom:16px}
+.form-label{display:block;font-size:0.8rem;font-weight:600;color:var(--dark);margin-bottom:5px}
+.form-control{width:100%;padding:12px 14px;border:2px solid var(--border);border-radius:var(--radius);font-family:var(--font-body);font-size:0.93rem;color:var(--dark);background:white;transition:border-color 0.2s,box-shadow 0.2s;outline:none}
+.form-control:focus{border-color:var(--orange);box-shadow:0 0 0 4px rgba(249,115,22,0.1)}
+.form-control::placeholder{color:#9CA3AF}
+textarea.form-control{resize:vertical;min-height:110px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form-submit .btn{width:100%;justify-content:center;padding:15px}
+.form-note{text-align:center;font-size:0.76rem;color:var(--gray);margin-top:8px}
+.form-success{display:none;text-align:center;padding:36px 20px}
+.form-success-icon{width:60px;height:60px;background:#D1FAE5;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
+.form-success-icon svg{color:#059669}
+.form-success h3{font-size:1.3rem;color:var(--black);margin-bottom:8px}
+.form-success p{font-size:0.88rem;color:var(--gray)}
+
+/* KONTAKT */
+#kontakt{background:var(--black);padding:0}
+.kontakt-inner{display:grid;grid-template-columns:1fr 1.4fr}
+.kontakt-info{padding:72px 5% 72px 5%;display:flex;flex-direction:column;justify-content:center}
+.kontakt-info .section-label{color:var(--orange)}
+.kontakt-info .section-title{color:white;margin-bottom:32px}
+.kontakt-items{display:flex;flex-direction:column;gap:18px;margin-bottom:32px}
+.kontakt-item{display:flex;align-items:flex-start;gap:14px}
+.kontakt-item-icon{width:44px;height:44px;background:rgba(249,115,22,0.15);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.kontakt-item-icon svg{width:19px;height:19px;color:var(--orange)}
+.kontakt-item-label{font-size:0.76rem;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;margin-bottom:3px}
+.kontakt-item-value{font-size:0.98rem;color:white;font-weight:500}
+.kontakt-item-value a{color:white;transition:color 0.2s}
+.kontakt-item-value a:hover{color:var(--orange)}
+.kontakt-hours{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:18px}
+.kontakt-hours-title{font-family:var(--font-display);font-size:0.85rem;font-weight:700;color:var(--orange);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:10px}
+.kontakt-hour-row{display:flex;justify-content:space-between;font-size:0.85rem;color:rgba(255,255,255,0.6);padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.06)}
+.kontakt-hour-row:last-child{border-bottom:none}
+.map-area{min-height:480px;background:#1a1a1a;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:40px;text-align:center}
+.map-area-icon{width:72px;height:72px;background:rgba(249,115,22,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.map-area-icon svg{width:32px;height:32px;color:var(--orange)}
+.map-area h3{font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:white}
+.map-area p{font-size:0.9rem;color:rgba(255,255,255,0.5);max-width:300px;line-height:1.6}
+.map-area a{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:white;padding:12px 24px;border-radius:50px;font-weight:600;font-size:0.9rem;transition:var(--tr);margin-top:8px}
+.map-area a:hover{background:var(--orange-dark);transform:translateY(-2px)}
+
+/* FOOTER */
+footer{background:#080808;padding:56px 5% 24px;color:rgba(255,255,255,0.5);font-size:0.86rem}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:44px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,0.08);margin-bottom:24px}
+.footer-logo-img{width:52px;height:52px;border-radius:50%;object-fit:cover;margin-bottom:10px}
+.footer-brand-name{font-family:var(--font-display);font-size:1.3rem;font-weight:800;color:white;margin-bottom:4px}
+.footer-brand-sub{font-size:0.8rem;color:rgba(255,255,255,0.38);margin-bottom:14px}
+.footer-brand-desc{line-height:1.7;font-size:0.84rem;margin-bottom:18px}
+.footer-socials{display:flex;gap:8px}
+.footer-social{width:36px;height:36px;background:rgba(255,255,255,0.08);border-radius:9px;display:flex;align-items:center;justify-content:center;transition:var(--tr)}
+.footer-social:hover{background:var(--orange);transform:translateY(-3px)}
+.footer-social svg{width:15px;height:15px;color:white}
+.footer-col-title{font-family:var(--font-display);font-weight:700;font-size:0.95rem;color:white;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:16px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:9px}
+.footer-links a{color:rgba(255,255,255,0.48);transition:color 0.2s;font-size:0.86rem}
+.footer-links a:hover{color:var(--orange)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.footer-copy{font-size:0.78rem}
+.footer-legal{display:flex;gap:18px}
+.footer-legal a{color:rgba(255,255,255,0.38);font-size:0.78rem;transition:color 0.2s;cursor:pointer}
+.footer-legal a:hover{color:white}
+
+/* STICKY */
+#scrollTop{position:fixed;bottom:96px;right:22px;z-index:990;width:44px;height:44px;background:var(--black);color:white;border:none;border-radius:12px;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;transform:translateY(10px);transition:var(--tr);box-shadow:var(--shadow-lg)}
+#scrollTop.visible{opacity:1;transform:translateY(0)}
+#scrollTop:hover{background:var(--orange);transform:translateY(-3px)}
+#stickyPhone{position:fixed;bottom:22px;right:22px;z-index:990;display:flex;align-items:center;gap:10px;background:var(--orange);color:white;padding:12px 20px 12px 14px;border-radius:50px;font-weight:600;font-size:0.93rem;box-shadow:0 6px 28px rgba(249,115,22,0.5);transition:var(--tr)}
+#stickyPhone:hover{background:var(--orange-dark);transform:scale(1.04)}
+#stickyPhone svg{width:19px;height:19px;flex-shrink:0}
+.sp-pulse{position:absolute;inset:-4px;border-radius:50px;border:2px solid var(--orange);animation:phPulse 2.5s infinite;opacity:0;pointer-events:none}
+@keyframes phPulse{0%{transform:scale(1);opacity:0.7}100%{transform:scale(1.18);opacity:0}}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.65s,transform 0.65s}
+.reveal.visible{opacity:1;transform:none}
+.reveal-left{opacity:0;transform:translateX(-28px);transition:opacity 0.65s,transform 0.65s}
+.reveal-left.visible{opacity:1;transform:none}
+.reveal-right{opacity:0;transform:translateX(28px);transition:opacity 0.65s,transform 0.65s}
+.reveal-right.visible{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(20px);transition:opacity 0.5s,transform 0.5s}
+.stagger.visible>*:nth-child(1){opacity:1;transform:none;transition-delay:0.05s}
+.stagger.visible>*:nth-child(2){opacity:1;transform:none;transition-delay:0.11s}
+.stagger.visible>*:nth-child(3){opacity:1;transform:none;transition-delay:0.17s}
+.stagger.visible>*:nth-child(4){opacity:1;transform:none;transition-delay:0.23s}
+.stagger.visible>*:nth-child(5){opacity:1;transform:none;transition-delay:0.29s}
+.stagger.visible>*:nth-child(6){opacity:1;transform:none;transition-delay:0.35s}
+
+/* =============================================
+   MODALS: Polityka prywatności & Regulamin
+   ============================================= */
+.modal-overlay{
+  position:fixed;inset:0;z-index:3000;
+  display:none;align-items:center;justify-content:center;
+  padding:20px;
+}
+.modal-overlay.open{display:flex}
+.modal-backdrop{
+  position:absolute;inset:0;
+  background:rgba(0,0,0,0.65);
+  backdrop-filter:blur(5px);
+  -webkit-backdrop-filter:blur(5px);
+  cursor:pointer;
+}
+.modal-box{
+  position:relative;z-index:1;
+  background:white;border-radius:20px;
+  width:100%;max-width:740px;max-height:88vh;
+  overflow:hidden;
+  display:flex;flex-direction:column;
+  box-shadow:0 32px 80px rgba(0,0,0,0.28);
+  animation:modalIn 0.35s cubic-bezier(0.4,0,0.2,1);
+}
+@keyframes modalIn{from{opacity:0;transform:translateY(24px) scale(0.97)}to{opacity:1;transform:none}}
+.modal-header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:28px 32px 20px;
+  border-bottom:1px solid var(--border);
+  flex-shrink:0;
+}
+.modal-header-left{display:flex;align-items:center;gap:14px}
+.modal-header-icon{
+  width:44px;height:44px;background:var(--orange-light);border-radius:12px;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.modal-header-icon svg{width:20px;height:20px;color:var(--orange-dark)}
+.modal-title{font-family:var(--font-display);font-size:1.6rem;font-weight:800;color:var(--black)}
+.modal-close-btn{
+  width:38px;height:38px;border-radius:10px;
+  background:var(--gray-light);border:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:var(--tr);color:var(--gray);flex-shrink:0;
+}
+.modal-close-btn:hover{background:var(--orange);color:white}
+.modal-close-btn svg{width:17px;height:17px}
+.modal-body{
+  padding:28px 32px 32px;
+  overflow-y:auto;
+  flex:1;
+  -webkit-overflow-scrolling:touch;
+}
+.modal-body::-webkit-scrollbar{width:4px}
+.modal-body::-webkit-scrollbar-thumb{background:var(--orange-light);border-radius:2px}
+.modal-section{margin-bottom:24px}
+.modal-section:last-child{margin-bottom:0}
+.modal-section-title{
+  font-family:var(--font-display);font-size:1.15rem;font-weight:700;
+  color:var(--black);margin-bottom:8px;
+  display:flex;align-items:center;gap:8px;
+}
+.modal-section-title::before{
+  content:'';display:block;width:4px;height:18px;
+  background:var(--orange);border-radius:2px;flex-shrink:0;
+}
+.modal-body p{font-size:0.88rem;color:var(--gray);line-height:1.75;margin-bottom:8px}
+.modal-body ul{margin:8px 0 8px 0;padding-left:0;list-style:none}
+.modal-body ul li{
+  font-size:0.87rem;color:var(--gray);line-height:1.65;
+  padding:3px 0 3px 18px;position:relative;
+}
+.modal-body ul li::before{
+  content:'';position:absolute;left:0;top:10px;
+  width:7px;height:7px;border-radius:50%;
+  background:var(--orange);flex-shrink:0;
+}
+.modal-highlight{
+  background:var(--orange-light);border-left:3px solid var(--orange);
+  border-radius:0 var(--radius) var(--radius) 0;
+  padding:12px 16px;margin:16px 0;
+  font-size:0.85rem;color:var(--dark);font-weight:500;
+}
+.modal-footer{
+  padding:16px 32px;border-top:1px solid var(--border);
+  display:flex;justify-content:flex-end;flex-shrink:0;
+  background:var(--gray-light);
+}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .dlaczego-grid{grid-template-columns:1fr;gap:44px}
+  .footer-top{grid-template-columns:1fr 1fr;gap:32px}
+  .form-container{grid-template-columns:1fr;gap:44px}
+  .kontakt-inner{grid-template-columns:1fr}
+  .map-area{min-height:240px}
+}
+@media(max-width:768px){
+  section{padding:56px 5%}
+  .nav-links,.nav-cta{display:none}
+  .hamburger{display:flex}
+  .hero-title{font-size:clamp(2.4rem,9vw,3.8rem)}
+  .hero-stats{gap:20px}
+  .hero-divider{display:none}
+  .features-grid{grid-template-columns:1fr}
+  .ba-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr;gap:28px}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .gallery-item{flex:0 0 220px;height:165px}
+  .review-card{flex:0 0 270px}
+  .form-row{grid-template-columns:1fr}
+  .hero-btns{flex-direction:column;align-items:flex-start}
+  #stickyPhone .sp-text{display:none}
+  #stickyPhone{padding:13px;border-radius:50%;width:50px;height:50px;justify-content:center}
+  .trust-strip-inner{gap:14px}
+  .trust-item{font-size:0.78rem}
+  /* Tabs mobile */
+  .tabs-nav{display:none}
+  .tabs-mobile-select{display:block}
+  .services-tab-grid{grid-template-columns:1fr 1fr}
+  /* Modal mobile */
+  .modal-header{padding:20px 20px 16px}
+  .modal-body{padding:20px 20px 24px}
+  .modal-footer{padding:12px 20px}
+  .modal-title{font-size:1.3rem}
+}
+@media(max-width:480px){
+  .hero-stats{flex-direction:column;gap:12px}
+  .services-tab-grid{grid-template-columns:1fr}
+  .tab-btn{font-size:0.82rem;padding:10px 16px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <img src="images/logo.png" alt="Ł.B Remonty" class="nav-logo-img" style="width:48px;height:48px;object-fit:contain;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.3));transition:transform 0.3s;border-radius:50%">
+      <div>
+        <span class="nav-logo-name">Ł.B Remonty</span>
+        <span class="nav-logo-sub">Remonty i Wykończenia</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#hero">Strona główna</a></li>
+      <li><a href="#uslugi">Usługi</a></li>
+      <li><a href="#realizacje">Realizacje</a></li>
+      <li><a href="#opinie">Opinie</a></li>
+      <li><a href="#kontakt-form">Kontakt</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="tel:+48570038144" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="16" height="16"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.63a19.79 19.79 0 01-3.07-8.67A2 2 0 012.08 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.72 6.72l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Zadzwoń
+      </a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#hero" class="ml">Strona główna</a></li>
+    <li><a href="#uslugi" class="ml">Usługi</a></li>
+    <li><a href="#realizacje" class="ml">Realizacje</a></li>
+    <li><a href="#opinie" class="ml">Opinie</a></li>
+    <li><a href="#kontakt-form" class="ml">Kontakt</a></li>
+  </ul>
+  <a href="tel:+48570038144" class="btn btn-primary btn-lg">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="18" height="18"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.63a19.79 19.79 0 01-3.07-8.67A2 2 0 012.08 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.72 6.72l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    +48 570 038 144
+  </a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><span class="hero-badge-dot"></span>22 lata doświadczenia &nbsp;·&nbsp; Wrocław i okolice</div>
+    <h1 class="hero-title">Profesjonalne<br>remonty i <span>wykończenia</span><br>wnętrz</h1>
+    <p class="hero-sub">Kompleksowe usługi remontowe od projektu do klucza. Rzetelnie, na czas i w ustalonym budżecie.</p>
+    <div class="hero-btns">
+      <a href="tel:+48570038144" class="btn btn-primary btn-lg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="20" height="20"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.63a19.79 19.79 0 01-3.07-8.67A2 2 0 012.08 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.72 6.72l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Zadzwoń teraz
+      </a>
+      <a href="#kontakt-form" class="btn btn-outline btn-lg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h4"/></svg>
+        Wyceń remont
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hero-stat-num">1000<span>+</span></div><div class="hero-stat-label">Ukończonych projektów</div></div>
+      <div class="hero-divider"></div>
+      <div class="hero-stat"><div class="hero-stat-num">22<span>+</span></div><div class="hero-stat-label">Lat doświadczenia</div></div>
+      <div class="hero-divider"></div>
+      <div class="hero-stat"><div class="hero-stat-num">5.0<span>★</span></div><div class="hero-stat-label">Ocena na Fixly</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="trust-strip">
+  <div class="trust-strip-inner">
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Bezpłatna wycena</div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Gwarancja 24 miesiące</div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Stała cena bez ukrytych kosztów</div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Terminowość 100%</div>
+  </div>
+</div>
+
+<!-- =============================================
+     TASK 3: SERVICES WITH TABS
+     ============================================= -->
+<section id="uslugi">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Zakres prac</div>
+      <h2 class="section-title">Nasze usługi</h2>
+      <p class="section-sub">Oferujemy ponad 100 usług remontowych — od małych napraw po generalne wykończenia pod klucz.</p>
+    </div>
+
+    <div class="services-tabs">
+      <!-- Mobile: select dropdown -->
+      <div class="tabs-mobile-select">
+        <select id="tabSelect" onchange="switchTab(this.value)">
+          <option value="tab-malowanie">🎨 Malowanie i Wykończenie</option>
+          <option value="tab-remonty">🔨 Remonty i Budowa</option>
+          <option value="tab-montaz">🔧 Montaż i Naprawy</option>
+          <option value="tab-ogrod">🌿 Dom i Ogród</option>
+        </select>
+      </div>
+
+      <!-- Desktop: tab buttons -->
+      <div class="tabs-nav">
+        <button class="tab-btn active" onclick="switchTab('tab-malowanie')" data-tab="tab-malowanie">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20l4-4 13-13a1 1 0 011.4 0l2.6 2.6a1 1 0 010 1.4L10 20H2z"/><path d="M14 6l4 4"/></svg>
+          Malowanie i Wykończenie
+        </button>
+        <button class="tab-btn" onclick="switchTab('tab-remonty')" data-tab="tab-remonty">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+          Remonty i Budowa
+        </button>
+        <button class="tab-btn" onclick="switchTab('tab-montaz')" data-tab="tab-montaz">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M4.93 19.07l1.41-1.41M19.07 19.07l-1.41-1.41M4.93 4.93l1.41 1.41M2 12h2m16 0h2M12 2v2m0 16v2"/></svg>
+          Montaż i Naprawy
+        </button>
+        <button class="tab-btn" onclick="switchTab('tab-ogrod')" data-tab="tab-ogrod">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8C8 10 5.9 16.17 3.82 19a10 10 0 0014.14-14.14C14 8 12 8 12 8s-.5 6-3 8"/><path d="M17 8c0 8-5 12.5-5 12.5"/></svg>
+          Dom i Ogród
+        </button>
+      </div>
+
+      <!-- TAB: Malowanie i Wykończenie -->
+      <div class="tab-panel active" id="tab-malowanie">
+        <div class="services-tab-grid">
+          <div class="service-tab-item">
+            <div class="service-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 20l4-4 13-13 3 3-13 13H2z"/><path d="M14 6l4 4"/></svg></div>
+            <div><div class="service-tab-name">Malowanie ścian i sufitów</div><div class="service-tab-desc">Gładkie, równe powierzchnie bez smug i zacieków</div></div>
+          </div>
+          <div class="service-tab-item">
+            <div class="service-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+            <div><div class="service-tab-name">Tapetowanie</div><div class="service-tab-desc">Tapety klasyczne, strukturalne i fototapety</div></div>
+          </div>
+          <div class="service-tab-item">
+            <div class="service-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+            <div><div class="service-tab-name">Gipsowanie</div><div class="service-tab-desc">Wyrównanie ścian i sufitów tynkiem gipsowym</div></div>
+          </div>
+          <div class="service-tab-item">
+            <div class="service-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+            <div><div class="service-tab-name">Szpachlowanie</div><div class="service-tab-desc">Idealnie gładkie ściany, przygotowanie pod malowanie</div></div>
+          </div>
+          <div class="service-tab-item">
+            <div class="service-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 12s1-2 4-2 4 2 4 2"/><path d="M9 9h.01M15 9h.01"/></svg></div>
+            <div><div class="service-tab-name">Artystyczne malowanie</div><div class="service-tab-desc">Dekoracje malarskie, efekty specjalne, wzory</div></div>
+          </div>
+          <div class="service-tab-item">
+            <div class="service-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+            <div><div class="service-tab-name">Malowanie mebli i boazerii</div><div class="service-tab-desc">Odświeżenie i renowacja starych mebli i paneli</div></div>
+          </div>
+          <div class="service-tab-item">
+            <div class="service-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
+            <div><div class="service-tab-name">Malowanie elewacji</div><div class="service-tab-desc">Farby elewacyjne, renowacja fasad budynków</div></div>
+          </div>
+          <div class="service-tab-item">
+            <div class="service-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></div>
+            <div><div class="service-tab-name">Szlifowanie i przygotowanie</div><div class="service-tab-desc">Profesjonalne przygotowanie podłoży pod każde wykończenie</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB: Remonty i Budowa -->
+      <div class="tab-panel" id="tab-remonty">
+        <div class="services-tab-grid">
+          <div class="service-tab-item">
+            <div class="service-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v4H4zM4 12h16v4H4z"/><circle cx="8" cy="20" r="2"/><circle cx="16" cy="20" r="2"/></svg></div>
+            <div><div class="service-tab-name">Remont łazienki</div><div class="service-tab-desc">Kompleksowa przebudowa od projektu do odbioru</div></div>
+          </div>
+          <div class="service-tab-item">
+            <div class="service-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg></div>
+            <div><div class="service-tab-name">Remont kuchni</div><div class="service-tab-desc">Zabudowy, płytki, instalacje — kuchnia na nowo</div></div>
+          </div>
+          <div class="service-tab-item">
+            <div class="service-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+            <div><div class="service-tab-name">Remont pokoju</div><div class="service-tab-desc">Odświeżenie lub pełna zmiana aranżacji pokoju</div></div>
+          </div>
+          <div class="service-tab-item">
+            <div class="service-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></div>
+            <div><div class="service-tab-name">Remont biura</div><div class="service-tab-desc">Profesjonalne wykończenie przestrzeni biurowej</div></div>
+          </div>
+          <div class="service-tab-item">
+            <div class="service-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+            <div><div class="service-tab-name">Wykończenie pod klucz</div><div class="service-tab-desc">Jeden wykonawca — wszystkie prace od A do Z</div></div>
+          </div>
+          <div class="service-tab-item">
+            <div class="service-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></div>
+            <div><div class="service-tab-name">Budowa ścianek działowych</div><div class="service-tab-desc">Podział przestrzeni murowane i systemowe</div></div>
+          </div>
+          <div class="service-tab-item">
+            <div class="service-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+            <div><div class="service-tab-name">Zabudowa g-k</div><div class="service-tab-desc">Sufity podwieszane, regały, zabudowy GK</div></div>
+          </div>
+          <div class="service-tab-item">
+            <div class="service-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 3H6a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2z"/><path d="M7 15h3M7 11h3M14 11h3M14 15h3"/></svg></div>
+            <div><div class="service-tab-name">Budowa kominków</div><div class="service-tab-desc">Kominek tradycyjny, obudowa, wykończenie ceramiką</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB: Montaż i Naprawy -->
+      <div class="tab-panel" id="tab-montaz">
+        <div class="services-tab-grid">
+          <div class="service-tab-item">
+            <div class="service-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9v11a2 2 0 002 2h4V12h6v10h4a2 2 0 002-2V9L12 2 3 9z"/></svg></div>
+            <div><div class="service-tab-name">Montaż okien</div><div class="service-tab-desc">Montaż, regulacja i uszczelnienie okien PVC i drewnianych</div></div>
+          </div>
+          <div class="service-tab-item">
+            <div class="service-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="4" height="18" rx="1"/><rect x="17" y="3" width="4" height="18" rx="1"/><path d="M7 12h10"/></svg></div>
+            <div><div class="service-tab-name">Montaż drzwi</div><div class="service-tab-desc">Drzwi wewnętrzne, zewnętrzne, ościeżnice regulowane</div></div>
+          </div>
+          <div class="service-tab-item">
+            <div class="service-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="15" width="20" height="4" rx="1"/><path d="M4 15V9l8-6 8 6v6"/></svg></div>
+            <div><div class="service-tab-name">Montaż parapetów</div><div class="service-tab-desc">Parapety wewnętrzne i zewnętrzne, PVC i kamień</div></div>
+          </div>
+          <div class="service-tab-item">
+            <div class="service-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v4H4zM4 12h16v4H4z"/><circle cx="8" cy="20" r="2"/><circle cx="16" cy="20" r="2"/></svg></div>
+            <div><div class="service-tab-name">Biały montaż</div><div class="service-tab-desc">Armatura łazienkowa, umywalki, WC, kabiny prysznicowe</div></div>
+          </div>
+          <div class="service-tab-item">
+            <div class="service-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
+            <div><div class="service-tab-name">Naprawa okien</div><div class="service-tab-desc">Regulacja, uszczelnienie, wymiana uszczelek i szyb</div></div>
+          </div>
+          <div class="service-tab-item">
+            <div class="service-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div>
+            <div><div class="service-tab-name">Montaż AGD</div><div class="service-tab-desc">Pralka, zmywarka, piekarnik — podłączenie i montaż</div></div>
+          </div>
+          <div class="service-tab-item">
+            <div class="service-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <div><div class="service-tab-name">Drobne naprawy domowe</div><div class="service-tab-desc">Wszystko co wymaga szybkiej, fachowej ręki</div></div>
+          </div>
+          <div class="service-tab-item">
+            <div class="service-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+            <div><div class="service-tab-name">Montaż TV i żyrandoli</div><div class="service-tab-desc">Mocowanie telewizorów na ścianie, lamp i żyrandoli</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB: Dom i Ogród -->
+      <div class="tab-panel" id="tab-ogrod">
+        <div class="services-tab-grid">
+          <div class="service-tab-item">
+            <div class="service-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M3 7h18M3 14h18M8 7V3M12 7V3M16 7V3"/></svg></div>
+            <div><div class="service-tab-name">Koszenie trawy</div><div class="service-tab-desc">Regularne koszenie ogródków i działek, wywóz trawy</div></div>
+          </div>
+          <div class="service-tab-item">
+            <div class="service-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 8C8 10 5.9 16.17 3.82 19a10 10 0 0014.14-14.14C14 8 12 8 12 8s-.5 6-3 8"/><path d="M17 8c0 8-5 12.5-5 12.5"/></svg></div>
+            <div><div class="service-tab-name">Pielęgnacja trawnika</div><div class="service-tab-desc">Nawożenie, aeracja, dosiewanie, renowacja trawnika</div></div>
+          </div>
+          <div class="service-tab-item">
+            <div class="service-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 20A7 7 0 014.86 8.7a7 7 0 0113.81-.28M15 14s1 1 2 1 2-1 2-1M12 17v4"/></svg></div>
+            <div><div class="service-tab-name">Wycinka drzew</div><div class="service-tab-desc">Bezpieczna wycinka, przycinanie koron, usuwanie pni</div></div>
+          </div>
+          <div class="service-tab-item">
+            <div class="service-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 20h20M6 20V10l6-6 6 6v10M10 20v-5h4v5"/></svg></div>
+            <div><div class="service-tab-name">Projekt ogrodu</div><div class="service-tab-desc">Aranżacja i zagospodarowanie przestrzeni ogrodowej</div></div>
+          </div>
+          <div class="service-tab-item">
+            <div class="service-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M3 11l9-8 9 8"/></svg></div>
+            <div><div class="service-tab-name">Montaż ogrodzeń</div><div class="service-tab-desc">Ogrodzenia metalowe, drewniane, panelowe i siatki</div></div>
+          </div>
+          <div class="service-tab-item">
+            <div class="service-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v6m0 0C9.6 5.5 5.5 7.5 4 10M12 8c2.4-2.5 6.5-.5 8 2M4 10c-.4 1-.6 2-.4 3M20 10c.4 1 .6 2 .4 3M4 13c.6 2.5 3 5 8 7M20 13c-.6 2.5-3 5-8 7"/></svg></div>
+            <div><div class="service-tab-name">Odśnieżanie</div><div class="service-tab-desc">Sezonowe odśnieżanie dróg, podjazdów i dachów</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:44px" class="reveal">
+      <a href="#kontakt-form" class="btn btn-dark btn-lg">Wyceń swój remont →</a>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     TASK 1: REALIZACJE — INFINITE MARQUEE
+     ============================================= -->
+<section id="realizacje">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Portfolio</div>
+      <h2 class="section-title">Nasze realizacje</h2>
+      <p class="section-sub">Każdy projekt to nasza wizytówka. Efekty mówią same za siebie.</p>
+    </div>
+  </div>
+
+  <!-- Only unique items here — JS will clone them for seamless loop -->
+  <div class="gallery-track-wrapper">
+    <div class="gallery-track" id="galleryTrack">
+      <div class="gallery-item"><img src="images/after1.jpg" alt="Taras — Wrocław" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-text">Taras — Wrocław</div></div></div>
+      <div class="gallery-item"><img src="images/after2.jpg" alt="Płytki marmurowe — Wrocław" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-text">Płytki marmurowe — Wrocław</div></div></div>
+      <div class="gallery-item"><img src="images/after3.jpg" alt="Podłoga jodełka — Wrocław" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-text">Podłoga jodełka — Wrocław</div></div></div>
+      <div class="gallery-item"><img src="images/after4.jpg" alt="Schody wejściowe — Wrocław" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-text">Schody wejściowe — Wrocław</div></div></div>
+      <div class="gallery-item"><img src="images/after5.jpg" alt="Elewacja kamienicy — Wrocław" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-text">Elewacja kamienicy — Wrocław</div></div></div>
+      <div class="gallery-item"><img src="images/barber1.jpg" alt="BarberShop — Wrocław" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-text">BarberShop — Wrocław</div></div></div>
+      <div class="gallery-item"><img src="images/barber2.jpg" alt="BarberShop — Wrocław" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-text">BarberShop — Wrocław</div></div></div>
+      <div class="gallery-item"><img src="images/after1.jpg" alt="Taras — Wrocław" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-text">Taras — Wrocław</div></div></div>
+      <div class="gallery-item"><img src="images/after2.jpg" alt="Płytki marmurowe" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-text">Płytki marmurowe — Wrocław</div></div></div>
+      <div class="gallery-item"><img src="images/after3.jpg" alt="Podłoga jodełka" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-text">Podłoga jodełka — Wrocław</div></div></div>
+      <div class="gallery-item"><img src="images/after4.jpg" alt="Schody" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-text">Schody wejściowe — Wrocław</div></div></div>
+      <div class="gallery-item"><img src="images/after5.jpg" alt="Elewacja" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-text">Elewacja kamienicy — Wrocław</div></div></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="ba-section">
+      <div class="reveal">
+        <div class="section-label">Efekty pracy</div>
+        <h3 class="section-title" style="font-size:clamp(1.7rem,4vw,2.5rem)">Przed i po remoncie</h3>
+        <p class="section-sub">Przeciągnij suwak, aby zobaczyć efekt naszej pracy.</p>
+      </div>
+      <div class="ba-grid stagger">
+        <div class="ba-card">
+          <div class="ba-slider" data-idx="0">
+            <div class="ba-after"><img src="images/after1.jpg" alt="Po"></div>
+            <div class="ba-before"><img src="images/before1.jpg" alt="Przed"></div>
+            <div class="ba-divider"></div>
+            <div class="ba-handle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M8 5l-5 7 5 7M16 5l5 7-5 7"/></svg></div>
+            <div class="ba-labels"><span class="ba-label">Przed</span><span class="ba-label">Po</span></div>
+          </div>
+          <div class="ba-info"><h4>Taras — ułożenie płyt</h4><p>Wrocław · czas realizacji: 5 dni</p></div>
+        </div>
+        <div class="ba-card">
+          <div class="ba-slider" data-idx="1">
+            <div class="ba-after"><img src="images/after2.jpg" alt="Po"></div>
+            <div class="ba-before"><img src="images/before2.jpg" alt="Przed"></div>
+            <div class="ba-divider"></div>
+            <div class="ba-handle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M8 5l-5 7 5 7M16 5l5 7-5 7"/></svg></div>
+            <div class="ba-labels"><span class="ba-label">Przed</span><span class="ba-label">Po</span></div>
+          </div>
+          <div class="ba-info"><h4>Płytki marmurowe — kuchnia</h4><p>Wrocław · czas realizacji: 8 dni</p></div>
+        </div>
+        <div class="ba-card">
+          <div class="ba-slider" data-idx="2">
+            <div class="ba-after"><img src="images/after3.jpg" alt="Po"></div>
+            <div class="ba-before"><img src="images/before3.jpg" alt="Przed"></div>
+            <div class="ba-divider"></div>
+            <div class="ba-handle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M8 5l-5 7 5 7M16 5l5 7-5 7"/></svg></div>
+            <div class="ba-labels"><span class="ba-label">Przed</span><span class="ba-label">Po</span></div>
+          </div>
+          <div class="ba-info"><h4>Podłoga jodełka + malowanie</h4><p>Wrocław · czas realizacji: 7 dni</p></div>
+        </div>
+        <div class="ba-card">
+          <div class="ba-slider" data-idx="3">
+            <div class="ba-after"><img src="images/after4.jpg" alt="Po"></div>
+            <div class="ba-before"><img src="images/before4.jpg" alt="Przed"></div>
+            <div class="ba-divider"></div>
+            <div class="ba-handle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M8 5l-5 7 5 7M16 5l5 7-5 7"/></svg></div>
+            <div class="ba-labels"><span class="ba-label">Przed</span><span class="ba-label">Po</span></div>
+          </div>
+          <div class="ba-info"><h4>Schody wejściowe — granit</h4><p>Wrocław · czas realizacji: 4 dni</p></div>
+        </div>
+        <div class="ba-card">
+          <div class="ba-slider" data-idx="4">
+            <div class="ba-after"><img src="images/after5.jpg" alt="Po"></div>
+            <div class="ba-before"><img src="images/before5.jpg" alt="Przed"></div>
+            <div class="ba-divider"></div>
+            <div class="ba-handle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M8 5l-5 7 5 7M16 5l5 7-5 7"/></svg></div>
+            <div class="ba-labels"><span class="ba-label">Przed</span><span class="ba-label">Po</span></div>
+          </div>
+          <div class="ba-info"><h4>Elewacja kamienicy</h4><p>Wrocław · czas realizacji: 14 dni</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DLACZEGO -->
+<section id="dlaczego">
+  <div class="container">
+    <div class="dlaczego-grid">
+      <div class="dlaczego-left reveal-left">
+        <div class="section-label">Dlaczego my?</div>
+        <h2 class="section-title">Wybierz pewność,<br>nie przypadek</h2>
+        <p class="section-sub">Pracujemy z pełnym zaangażowaniem, używamy sprawdzonych materiałów i dotrzymujemy terminów. Twój remont — bez niespodzianek.</p>
+        <div class="dlaczego-cta"><a href="#kontakt-form" class="btn btn-primary btn-lg">Wyceń swój remont →</a></div>
+      </div>
+      <div class="features-grid stagger reveal-right">
+        <div class="feature-item"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="feature-title">Gwarancja jakości</div><div class="feature-text">24 miesiące gwarancji na każde wykonane prace.</div></div>
+        <div class="feature-item"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div class="feature-title">Terminowość</div><div class="feature-text">Szanujemy Twój czas. Zawsze kończymy w ustalonym terminie.</div></div>
+        <div class="feature-item"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><div class="feature-title">Stała cena</div><div class="feature-text">Podajemy cenę przed pracami. Zero ukrytych kosztów.</div></div>
+        <div class="feature-item"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div><div class="feature-title">Własna ekipa</div><div class="feature-text">Pracujemy własnym, sprawdzonym zespołem. Żadnych podwykonawców.</div></div>
+        <div class="feature-item"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="feature-title">Kompleksowość</div><div class="feature-text">Jeden wykonawca, wszystkie prace. Od A do Z — pod klucz.</div></div>
+        <div class="feature-item"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div class="feature-title">Porządek po pracy</div><div class="feature-text">Sprzątamy po sobie. Odbierasz lokal gotowy do użytkowania.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     TASK 1+2: OPINIE — MARQUEE + FIXLY CORNER
+     ============================================= -->
+<section id="opinie">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Opinie klientów</div>
+      <h2 class="section-title">Co mówią o nas klienci</h2>
+    </div>
+  </div>
+
+  <!-- Stars SVG helper — reused inline -->
+  <div class="reviews-track-wrapper">
+    <div class="reviews-track" id="reviewsTrack">
+
+      <!-- CARD 1 -->
+      <div class="review-card">
+        <div class="fixly-corner"><img src="images/fixly.png" alt="Fixly"><span>fixly</span></div>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Remont kuchni + kilka dodatkowych prac zostały wykonane rzetelnie i w zadeklarowanym terminie. Panowie Łukasz i Wojtek byli bardzo pomocni i służyli radą, kiedy sytuacja tego wymagała."</p>
+        <div class="review-author">
+          <div class="review-avatar">PW</div>
+          <div><div class="review-name">Przemysław <span class="review-service">· Remont kuchni</span></div><div class="review-location">Wrocław</div><div class="review-date">25 marca 2026</div></div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="review-card">
+        <div class="fixly-corner"><img src="images/fixly.png" alt="Fixly"><span>fixly</span></div>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Próg do drzwi zamontowany bardzo porządnie i profesjonalnie. Tam gdzie inni szukają problemów, Pan Łukasz znajduje rozwiązania. Bardzo polecam :)"</p>
+        <div class="review-author">
+          <div class="review-avatar">MW</div>
+          <div><div class="review-name">Maciej <span class="review-service">· Drobne naprawy</span></div><div class="review-location">Wrocław</div><div class="review-date">9 grudnia 2025</div></div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="review-card">
+        <div class="fixly-corner"><img src="images/fixly.png" alt="Fixly"><span>fixly</span></div>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Wszystko ok, szybka realizacja, polecam."</p>
+        <div class="review-author">
+          <div class="review-avatar">SD</div>
+          <div><div class="review-name">Sławomir <span class="review-service">· Montaż sufitu podwieszanego</span></div><div class="review-location">Dzierżoniów</div><div class="review-date">26 czerwca 2025</div></div>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="review-card">
+        <div class="fixly-corner"><img src="images/fixly.png" alt="Fixly"><span>fixly</span></div>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Fachowiec był punktualny, zorganizowany, dbał o porządek. Bez niespodzianek, również pod kątem finansowym. Praca ustalona jasno, wykonanie na czas. Mogę uczciwie polecić firmę pana Łukasza!"</p>
+        <div class="review-author">
+          <div class="review-avatar">AW</div>
+          <div><div class="review-name">Adam <span class="review-service">· Montaż drzwi</span></div><div class="review-location">Wrocław</div><div class="review-date">7 czerwca 2025</div></div>
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="review-card">
+        <div class="fixly-corner"><img src="images/fixly.png" alt="Fixly"><span>fixly</span></div>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Szybko, profesjonalnie, wszystko zgodnie ze umówionym zakresem pracy. Polecam!"</p>
+        <div class="review-author">
+          <div class="review-avatar">RW</div>
+          <div><div class="review-name">Rafał <span class="review-service">· Montaż drzwi</span></div><div class="review-location">Wrocław</div><div class="review-date">4 czerwca 2025</div></div>
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="review-card">
+        <div class="fixly-corner"><img src="images/fixly.png" alt="Fixly"><span>fixly</span></div>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Super kontakt i realizacja. Pan Łukasz był bardzo pomocny przez cały proces, sam wychodził z inicjatywą co by można usprawnić. Wszystko wykonane na czas i w ustalonym budżecie."</p>
+        <div class="review-author">
+          <div class="review-avatar">JW</div>
+          <div><div class="review-name">Jasiek <span class="review-service">· Drobne naprawy</span></div><div class="review-location">Wrocław</div><div class="review-date">4 maja 2025</div></div>
+        </div>
+      </div>
+
+      <!-- CARD 7 -->
+      <div class="review-card">
+        <div class="fixly-corner"><img src="images/fixly.png" alt="Fixly"><span>fixly</span></div>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Polecam, usługa wykonana szybko i solidnie."</p>
+        <div class="review-author">
+          <div class="review-avatar">MW</div>
+          <div><div class="review-name">Marta <span class="review-service">· Drobne naprawy</span></div><div class="review-location">Wrocław</div><div class="review-date">14 kwietnia 2025</div></div>
+        </div>
+      </div>
+
+      <!-- CARD 8 -->
+      <div class="review-card">
+        <div class="fixly-corner"><img src="images/fixly.png" alt="Fixly"><span>fixly</span></div>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Polecam Pana Łukasza — terminowy, słowny, uczciwy. 100%"</p>
+        <div class="review-author">
+          <div class="review-avatar">MW</div>
+          <div><div class="review-name">Mariusz <span class="review-service">· Montaż drzwi</span></div><div class="review-location">Wrocław</div><div class="review-date">11 kwietnia 2025</div></div>
+        </div>
+      </div>
+
+      <!-- CARD 9 -->
+      <div class="review-card">
+        <div class="fixly-corner"><img src="images/fixly.png" alt="Fixly"><span>fixly</span></div>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Na czas, bezproblemowo, polecam."</p>
+        <div class="review-author">
+          <div class="review-avatar">PW</div>
+          <div><div class="review-name">Piotr <span class="review-service">· Montaż ogrodzenia</span></div><div class="review-location">Wrocław</div><div class="review-date">31 marca 2025</div></div>
+        </div>
+      </div>
+
+      <!-- CARD 10 -->
+      <div class="review-card">
+        <div class="fixly-corner"><img src="images/fixly.png" alt="Fixly"><span>fixly</span></div>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Bardzo dobry fachowiec, polecam serdecznie!"</p>
+        <div class="review-author">
+          <div class="review-avatar">AW</div>
+          <div><div class="review-name">Ania <span class="review-service">· Montaż karniszy</span></div><div class="review-location">Wilczyce Wrocławskie</div><div class="review-date">28 marca 2025</div></div>
+        </div>
+      </div>
+
+      <!-- CARD 11 -->
+      <div class="review-card">
+        <div class="fixly-corner"><img src="images/fixly.png" alt="Fixly"><span>fixly</span></div>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Elegancko i sprawnie, świetny kontakt. Dziękuję i polecam!"</p>
+        <div class="review-author">
+          <div class="review-avatar">MW</div>
+          <div><div class="review-name">Maria <span class="review-service">· Drobne naprawy</span></div><div class="review-location">Wrocław</div><div class="review-date">6 marca 2025</div></div>
+        </div>
+      </div>
+
+      <!-- CARD 12 -->
+      <div class="review-card">
+        <div class="fixly-corner"><img src="images/fixly.png" alt="Fixly"><span>fixly</span></div>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Polecam. Bardzo konkretny, sympatyczny fachowiec!"</p>
+        <div class="review-author">
+          <div class="review-avatar">DW</div>
+          <div><div class="review-name">Daniel <span class="review-service">· Montaż drzwi</span></div><div class="review-location">Wrocław</div><div class="review-date">3 marca 2025</div></div>
+        </div>
+      </div>
+
+      <!-- CARD 13 -->
+      <div class="review-card">
+        <div class="fixly-corner"><img src="images/fixly.png" alt="Fixly"><span>fixly</span></div>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Terminowo, szybko i sprawnie! Polecam!"</p>
+        <div class="review-author">
+          <div class="review-avatar">KC</div>
+          <div><div class="review-name">Kasia <span class="review-service">· Montaż listew</span></div><div class="review-location">Chrząstawa Mała</div><div class="review-date">2 marca 2025</div></div>
+        </div>
+      </div>
+
+      <!-- CARD 14 -->
+      <div class="review-card">
+        <div class="fixly-corner"><img src="images/fixly.png" alt="Fixly"><span>fixly</span></div>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Szybko, sprawnie i starannie. Cena przystępna. Polecam!"</p>
+        <div class="review-author">
+          <div class="review-avatar">SW</div>
+          <div><div class="review-name">Sylwester <span class="review-service">· Montaż drzwi</span></div><div class="review-location">Wrocław</div><div class="review-date">26 lutego 2025</div></div>
+        </div>
+      </div>
+
+      <!-- CARD 15 -->
+      <div class="review-card">
+        <div class="fixly-corner"><img src="images/fixly.png" alt="Fixly"><span>fixly</span></div>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Montaż karniszy, lamp, baterii i szafki w łazience — profesjonalnie, szybko i estetycznie. Polecam."</p>
+        <div class="review-author">
+          <div class="review-avatar">AW</div>
+          <div><div class="review-name">Anna <span class="review-service">· Drobne naprawy</span></div><div class="review-location">Wrocław</div><div class="review-date">25 lutego 2025</div></div>
+        </div>
+      </div>
+
+      <!-- CARD 16 -->
+      <div class="review-card">
+        <div class="fixly-corner"><img src="images/fixly.png" alt="Fixly"><span>fixly</span></div>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Szybko, sprawnie i bardzo starannie wykonane zlecenie. Dziękuję :)"</p>
+        <div class="review-author">
+          <div class="review-avatar">KW</div>
+          <div><div class="review-name">Kornelia <span class="review-service">· Układanie wykładzin</span></div><div class="review-location">Wrocław</div><div class="review-date">25 lutego 2025</div></div>
+        </div>
+      </div>
+
+      <!-- CARD 17 -->
+      <div class="review-card">
+        <div class="fixly-corner"><img src="images/fixly.png" alt="Fixly"><span>fixly</span></div>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Wszystko super, polecam!"</p>
+        <div class="review-author">
+          <div class="review-avatar">BW</div>
+          <div><div class="review-name">Basia <span class="review-service">· Konstrukcje GK</span></div><div class="review-location">Wrocław</div><div class="review-date">23 lutego 2025</div></div>
+        </div>
+      </div>
+
+      <!-- CARD 18 -->
+      <div class="review-card">
+        <div class="fixly-corner"><img src="images/fixly.png" alt="Fixly"><span>fixly</span></div>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Szybki kontakt i wycena, usługa zrealizowana szybko i profesjonalnie. Polecam!"</p>
+        <div class="review-author">
+          <div class="review-avatar">BO</div>
+          <div><div class="review-name">Bartosz <span class="review-service">· Montaż parapetów</span></div><div class="review-location">Oława</div><div class="review-date">22 lutego 2025</div></div>
+        </div>
+      </div>
+
+      <!-- CARD 19 -->
+      <div class="review-card">
+        <div class="fixly-corner"><img src="images/fixly.png" alt="Fixly"><span>fixly</span></div>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" style="fill:#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Wszystko super, bardzo dobre wykonanie, Pan sympatyczny. Polecam!"</p>
+        <div class="review-author">
+          <div class="review-avatar">PW</div>
+          <div><div class="review-name">Piotr <span class="review-service">· Montaż karniszy</span></div><div class="review-location">Wrocław</div><div class="review-date">17 lutego 2025</div></div>
+        </div>
+      </div>
+
+    </div><!-- /reviews-track -->
+  </div><!-- /reviews-track-wrapper -->
+</section>
+
+<!-- CONTACT FORM -->
+<section id="kontakt-form">
+  <div class="container">
+    <div class="form-container">
+      <div class="reveal-left">
+        <div class="section-label">Bezpłatna wycena</div>
+        <h2 class="section-title">Napisz do nas —<br>odpiszemy szybko</h2>
+        <p class="section-sub">Opisz swój remont, a my przygotujemy wycenę w ciągu 24 godzin. Bezpłatnie i bez zobowiązań.</p>
+        <div class="cql-items">
+          <a href="tel:+48570038144" class="cql-item">
+            <div class="cql-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.63a19.79 19.79 0 01-3.07-8.67A2 2 0 012.08 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.72 6.72l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+            <div><div class="cql-label">Zadzwoń teraz</div><div class="cql-value">+48 570 038 144</div></div>
+          </a>
+          <a href="mailto:lukaszbedkowski35@gmail.com" class="cql-item">
+            <div class="cql-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><div class="cql-label">Napisz e-mail</div><div class="cql-value">lukaszbedkowski35@gmail.com</div></div>
+          </a>
+          <a href="https://wa.me/48570038144" target="_blank" rel="noopener" class="btn btn-green" style="border-radius:12px;padding:16px 20px;justify-content:flex-start;gap:14px;font-size:0.93rem;text-decoration:none;display:flex;align-items:center;">
+            <svg viewBox="0 0 24 24" fill="white" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Napisz na WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <div class="contact-form">
+          <h3 class="form-title">Wyceń remont</h3>
+          <p class="form-subtitle">Odpiszemy w ciągu 24h · Bezpłatnie · Bez zobowiązań</p>
+          <div id="formContent">
+            <div class="form-row">
+              <div class="form-group"><label class="form-label">Imię i nazwisko *</label><input type="text" id="fname" class="form-control" placeholder="Jan Kowalski"></div>
+              <div class="form-group"><label class="form-label">Telefon *</label><input type="tel" id="fphone" class="form-control" placeholder="+48 000 000 000"></div>
+            </div>
+            <div class="form-group"><label class="form-label">Adres e-mail</label><input type="email" id="femail" class="form-control" placeholder="jan@email.pl"></div>
+            <div class="form-group"><label class="form-label">Rodzaj prac</label>
+              <select id="ftype" class="form-control"><option value="">Wybierz...</option><option>Remont generalny</option><option>Łazienka</option><option>Malowanie</option><option>Podłogi</option><option>Szpachlowanie</option><option>Drzwi i ościeżnice</option><option>Inne</option></select>
+            </div>
+            <div class="form-group"><label class="form-label">Opis prac i lokalizacja *</label><textarea id="fmsg" class="form-control" placeholder="Opisz zakres prac, metraż, lokalizację..."></textarea></div>
+            <div class="form-submit"><button type="button" class="btn btn-primary" id="submitBtn" onclick="handleSubmit()">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="17" height="17"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Wyślij zapytanie o wycenę
+            </button></div>
+            <p class="form-note">🔒 Twoje dane są bezpieczne. Nie wysyłamy spamu.</p>
+          </div>
+          <div class="form-success" id="formSuccess">
+            <div class="form-success-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="28" height="28"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <h3>Wiadomość wysłana!</h3>
+            <p>Dziękujemy za kontakt. Odezwiemy się w ciągu 24 godzin.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<div id="kontakt">
+  <div class="kontakt-inner">
+    <div class="kontakt-info">
+      <div class="section-label">Znajdź nas</div>
+      <h2 class="section-title">Kontakt</h2>
+      <div class="kontakt-items">
+        <div class="kontakt-item">
+          <div class="kontakt-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.63a19.79 19.79 0 01-3.07-8.67A2 2 0 012.08 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.72 6.72l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div><div class="kontakt-item-label">Telefon</div><div class="kontakt-item-value"><a href="tel:+48570038144">+48 570 038 144</a></div></div>
+        </div>
+        <div class="kontakt-item">
+          <div class="kontakt-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><div class="kontakt-item-label">E-mail</div><div class="kontakt-item-value"><a href="mailto:lukaszbedkowski35@gmail.com">lukaszbedkowski35@gmail.com</a></div></div>
+        </div>
+        <div class="kontakt-item">
+          <div class="kontakt-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="kontakt-item-label">Obszar działalności</div><div class="kontakt-item-value">Wrocław i okolice (do 50 km)</div></div>
+        </div>
+      </div>
+      <div class="kontakt-hours">
+        <div class="kontakt-hours-title">Godziny pracy</div>
+        <div class="kontakt-hour-row"><span>Poniedziałek – Piątek</span><span style="color:white;font-weight:500">7:00 – 18:00</span></div>
+        <div class="kontakt-hour-row"><span>Sobota</span><span style="color:white;font-weight:500">8:00 – 14:00</span></div>
+        <div class="kontakt-hour-row"><span>Niedziela</span><span>Zamknięte</span></div>
+      </div>
+    </div>
+    <div class="map-area">
+      <div class="map-area-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="32" height="32"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <h3>Wrocław i okolice</h3>
+      <p>Działamy na terenie Wrocławia i okolicznych miejscowości do 50 km. Przyjeżdżamy bezpłatnie na wycenę.</p>
+      <a href="https://maps.google.com/?q=Wrocław" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Zobacz na mapie Google
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <img src="images/logo.png" alt="Ł.B" class="footer-logo-img" style="width:56px;height:56px;object-fit:contain;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.4))">
+        <div class="footer-brand-name">Łukasz Będkowski</div>
+        <div class="footer-brand-sub">Remonty i Wykończenia Wnętrz</div>
+        <p class="footer-brand-desc">Profesjonalne usługi remontowe we Wrocławiu i okolicach. 22 lata doświadczenia. Rzetelnie, terminowo, bez niespodzianek.</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/share/v/1AefgG6Xpj/" class="footer-social" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="#" class="footer-social" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="https://wa.me/48570038144" class="footer-social" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Usługi</div>
+        <ul class="footer-links">
+          <li><a href="#uslugi">Malowanie i wykończenie</a></li>
+          <li><a href="#uslugi">Remonty i budowa</a></li>
+          <li><a href="#uslugi">Montaż i naprawy</a></li>
+          <li><a href="#uslugi">Dom i ogród</a></li>
+          <li><a href="#uslugi">Wykończenia pod klucz</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Firma</div>
+        <ul class="footer-links">
+          <li><a href="#hero">O nas</a></li>
+          <li><a href="#realizacje">Realizacje</a></li>
+          <li><a href="#opinie">Opinie</a></li>
+          <li><a href="#dlaczego">Dlaczego my?</a></li>
+          <li><a href="#kontakt-form">Bezpłatna wycena</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Kontakt</div>
+        <ul class="footer-links">
+          <li><a href="tel:+48570038144">+48 570 038 144</a></li>
+          <li><a href="mailto:lukaszbedkowski35@gmail.com" style="word-break:break-all">lukaszbedkowski35@gmail.com</a></li>
+          <li><a href="#kontakt">Wrocław i okolice</a></li>
+          <li><a href="#kontakt">Pon–Pt: 7:00–18:00</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Łukasz Będkowski – Remonty i Wykończenia. Wszelkie prawa zastrzeżone.</div>
+      <div class="footer-legal">
+        <a onclick="openModal('privacyModal')" role="button" tabindex="0">Polityka prywatności</a>
+        <a onclick="openModal('termsModal')" role="button" tabindex="0">Regulamin</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY ELEMENTS -->
+<a href="tel:+48570038144" id="stickyPhone">
+  <div class="sp-pulse"></div>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.63a19.79 19.79 0 01-3.07-8.67A2 2 0 012.08 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.72 6.72l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+  <span class="sp-text">+48 570 038 144</span>
+</a>
+<button id="scrollTop" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<!-- =============================================
+     MODAL: Polityka prywatności
+     ============================================= -->
+<div class="modal-overlay" id="privacyModal" onclick="handleModalClick(event,'privacyModal')">
+  <div class="modal-backdrop"></div>
+  <div class="modal-box">
+    <div class="modal-header">
+      <div class="modal-header-left">
+        <div class="modal-header-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="modal-title">Polityka prywatności</div>
+      </div>
+      <button class="modal-close-btn" onclick="closeModal('privacyModal')" aria-label="Zamknij">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-highlight">
+        Niniejsza polityka prywatności określa zasady przetwarzania danych osobowych w ramach serwisu internetowego oraz w trakcie świadczenia usług przez Łukasza Będkowskiego. Ostatnia aktualizacja: 1 stycznia 2026 r.
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-title">1. Administrator danych osobowych</div>
+        <p>Administratorem Twoich danych osobowych jest Łukasz Będkowski, prowadzący działalność gospodarczą pod firmą <strong>Ł.B Remonty i Wykończenia</strong>, z siedzibą we Wrocławiu. Kontakt z administratorem: telefon +48 570 038 144, e-mail: lukaszbedkowski35@gmail.com.</p>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-title">2. Zakres i cel przetwarzania danych</div>
+        <p>Przetwarzamy dane osobowe, które przekazujesz nam dobrowolnie, w następujących celach:</p>
+        <ul>
+          <li>Obsługa zapytań ofertowych i przygotowanie wyceny remontu (imię, numer telefonu, adres e-mail, opis zlecenia).</li>
+          <li>Realizacja zawartej umowy o roboty budowlane i usługi remontowe.</li>
+          <li>Kontakt w sprawie realizacji zlecenia oraz w ramach obsługi posprzedażowej i gwarancyjnej.</li>
+          <li>Wypełnianie obowiązków prawnych wynikających z przepisów podatkowych i rachunkowych.</li>
+        </ul>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-title">3. Podstawa prawna przetwarzania</div>
+        <p>Dane przetwarzamy na podstawie:</p>
+        <ul>
+          <li>Art. 6 ust. 1 lit. b RODO — przetwarzanie niezbędne do wykonania umowy lub podjęcia działań przed jej zawarciem.</li>
+          <li>Art. 6 ust. 1 lit. c RODO — obowiązek prawny (np. wystawianie faktur, przechowywanie dokumentacji).</li>
+          <li>Art. 6 ust. 1 lit. f RODO — uzasadniony interes administratora (obsługa zapytań, kontakt biznesowy).</li>
+        </ul>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-title">4. Okres przechowywania danych</div>
+        <p>Dane osobowe przechowujemy przez okres niezbędny do realizacji celu, w jakim zostały zebrane:</p>
+        <ul>
+          <li>Dane z formularza kontaktowego — przez 12 miesięcy od ostatniego kontaktu, chyba że doszło do zawarcia umowy.</li>
+          <li>Dane związane z umową — przez 5 lat od zakończenia roku podatkowego, w którym umowa została wykonana.</li>
+          <li>Dane w ramach gwarancji — przez okres udzielonej gwarancji (24 miesiące).</li>
+        </ul>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-title">5. Prawa przysługujące osobom, których dane dotyczą</div>
+        <p>Na podstawie przepisów RODO przysługują Ci następujące prawa:</p>
+        <ul>
+          <li>Prawo dostępu do Twoich danych osobowych.</li>
+          <li>Prawo do sprostowania (poprawiania) danych.</li>
+          <li>Prawo do usunięcia danych („prawo do bycia zapomnianym").</li>
+          <li>Prawo do ograniczenia przetwarzania danych.</li>
+          <li>Prawo do przenoszenia danych.</li>
+          <li>Prawo do wniesienia sprzeciwu wobec przetwarzania danych.</li>
+          <li>Prawo do wniesienia skargi do organu nadzorczego — Prezesa Urzędu Ochrony Danych Osobowych (ul. Stawki 2, 00-193 Warszawa).</li>
+        </ul>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-title">6. Przekazywanie danych podmiotom trzecim</div>
+        <p>Twoje dane nie są sprzedawane ani udostępniane podmiotom trzecim w celach marketingowych. Dane mogą być przekazywane wyłącznie podmiotom świadczącym usługi na rzecz administratora (np. księgowość, hosting), zobowiązanym do zachowania poufności, oraz uprawnionym organom na podstawie obowiązującego prawa.</p>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-title">7. Pliki cookies</div>
+        <p>Serwis może korzystać z technologii cookies (ciasteczek) wyłącznie w celach technicznych i analitycznych (Google Analytics). Możesz zmienić ustawienia cookies w swojej przeglądarce w dowolnym momencie. Korzystanie z serwisu bez zmiany ustawień cookies oznacza ich akceptację.</p>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-title">8. Kontakt w sprawach ochrony danych</div>
+        <p>W sprawach dotyczących ochrony danych osobowych możesz skontaktować się z nami pisząc na adres e-mail: <strong>lukaszbedkowski35@gmail.com</strong> lub dzwoniąc pod numer <strong>+48 570 038 144</strong>.</p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary" onclick="closeModal('privacyModal')" style="padding:12px 28px;font-size:0.9rem">Rozumiem i zamykam</button>
+    </div>
+  </div>
+</div>
+
+<!-- =============================================
+     MODAL: Regulamin
+     ============================================= -->
+<div class="modal-overlay" id="termsModal" onclick="handleModalClick(event,'termsModal')">
+  <div class="modal-backdrop"></div>
+  <div class="modal-box">
+    <div class="modal-header">
+      <div class="modal-header-left">
+        <div class="modal-header-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <div class="modal-title">Regulamin świadczenia usług</div>
+      </div>
+      <button class="modal-close-btn" onclick="closeModal('termsModal')" aria-label="Zamknij">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-highlight">
+        Niniejszy regulamin określa zasady świadczenia usług remontowych i budowlanych przez Łukasza Będkowskiego (Ł.B Remonty i Wykończenia, Wrocław). Zlecenie usługi jest równoznaczne z akceptacją poniższych warunków.
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-title">§ 1 Postanowienia ogólne</div>
+        <p>Usługodawcą jest Łukasz Będkowski prowadzący działalność pod firmą <strong>Ł.B Remonty i Wykończenia</strong> z siedzibą we Wrocławiu. Usługi świadczone są na terenie Wrocławia i okolicznych miejscowości w promieniu do 50 km. Regulamin dotyczy wszystkich usług remontowych, wykończeniowych, montażowych oraz ogrodniczych świadczonych przez Usługodawcę.</p>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-title">§ 2 Wycena i zawarcie umowy</div>
+        <ul>
+          <li>Wycena usług jest bezpłatna i odbywa się po oględzinach miejsca pracy lub na podstawie opisu przekazanego przez Klienta.</li>
+          <li>Wycena ma charakter wiążący i jest ważna przez 30 dni od daty jej przekazania.</li>
+          <li>Umowa zostaje zawarta z chwilą pisemnego lub elektronicznego potwierdzenia zlecenia przez obie strony.</li>
+          <li>Wszelkie zmiany zakresu prac wymagają formy pisemnej i mogą wiązać się ze zmianą ceny oraz terminu realizacji.</li>
+        </ul>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-title">§ 3 Realizacja usług</div>
+        <ul>
+          <li>Usługi wykonywane są przez własną, wykwalifikowaną ekipę Usługodawcy.</li>
+          <li>Termin rozpoczęcia i zakończenia prac określany jest indywidualnie w umowie lub potwierdzeniu zlecenia.</li>
+          <li>Usługodawca zobowiązuje się do informowania Klienta o wszelkich istotnych okolicznościach mogących wpłynąć na termin lub zakres realizacji.</li>
+          <li>Po zakończeniu prac wykonawca dokonuje sprzątania miejsca pracy.</li>
+        </ul>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-title">§ 4 Warunki płatności</div>
+        <ul>
+          <li>Wynagrodzenie za usługi płatne jest gotówką lub przelewem bankowym, zgodnie z ustaleniami w umowie.</li>
+          <li>Dopuszczalne jest pobranie zaliczki (do 30% wartości umowy) przed przystąpieniem do prac, w szczególności przy zakupie materiałów.</li>
+          <li>Pozostała kwota płatna jest po zakończeniu i odbiorze prac.</li>
+          <li>Cena ustalona w wycenie jest ostateczna i nie podlega zmianie bez pisemnej zgody obu stron, z wyjątkiem przypadków, gdy Klient zleca dodatkowe prace.</li>
+        </ul>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-title">§ 5 Gwarancja i rękojmia</div>
+        <p>Usługodawca udziela <strong>24-miesięcznej gwarancji</strong> na wykonane prace, liczonej od daty odbioru robót. Gwarancja obejmuje:</p>
+        <ul>
+          <li>Wady wynikające z nieprawidłowego wykonania usługi przez Usługodawcę.</li>
+          <li>Wady materiałowe, jeśli materiały zostały dostarczone przez Usługodawcę.</li>
+        </ul>
+        <p>Gwarancja nie obejmuje uszkodzeń mechanicznych, zalań, pożarów i innych zdarzeń losowych niezależnych od Usługodawcy, a także uszkodzeń wynikających z nieprawidłowej eksploatacji lub samodzielnych napraw przez Klienta.</p>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-title">§ 6 Reklamacje</div>
+        <ul>
+          <li>Reklamacje należy zgłaszać niezwłocznie po stwierdzeniu wady, telefonicznie lub mailowo.</li>
+          <li>Usługodawca rozpatruje reklamacje w terminie 14 dni roboczych od ich zgłoszenia.</li>
+          <li>W przypadku uwzględnienia reklamacji Usługodawca zobowiązuje się do bezpłatnego usunięcia wady w uzgodnionym terminie.</li>
+        </ul>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-title">§ 7 Odpowiedzialność i obowiązki Klienta</div>
+        <ul>
+          <li>Klient zobowiązany jest do zapewnienia dostępu do miejsca wykonywania usługi w uzgodnionych terminach.</li>
+          <li>Klient zobowiązany jest do zabezpieczenia wartościowych przedmiotów i wyposażenia przed przystąpieniem do prac.</li>
+          <li>Usługodawca nie ponosi odpowiedzialności za szkody wynikłe z ukrytych wad instalacji lub konstrukcji budynku, które nie były widoczne przed rozpoczęciem prac.</li>
+        </ul>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-title">§ 8 Odstąpienie od umowy</div>
+        <p>Klientowi przysługuje prawo do odstąpienia od umowy, z zastrzeżeniem, że zobowiązany jest pokryć koszty prac już wykonanych oraz zakupionych materiałów. Usługodawca zastrzega sobie prawo do odstąpienia od umowy w przypadku istotnej zmiany warunków realizacji lub braku współpracy ze strony Klienta.</p>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-title">§ 9 Postanowienia końcowe</div>
+        <p>W sprawach nieuregulowanych niniejszym regulaminem zastosowanie mają przepisy Kodeksu Cywilnego oraz innych właściwych przepisów prawa polskiego. Wszelkie spory wynikające z realizacji usług strony będą starały się rozwiązać polubownie. Sądem właściwym do rozstrzygania sporów jest sąd właściwy dla siedziby Usługodawcy.</p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary" onclick="closeModal('termsModal')" style="padding:12px 28px;font-size:0.9rem">Rozumiem i zamykam</button>
+    </div>
+  </div>
+</div>
+
+<!-- =============================================
+     JAVASCRIPT
+     ============================================= -->
+<script>
+// ---- MARQUEE SETUP: clone items for seamless infinite loop ----
+function setupMarquee(trackId) {
+  const track = document.getElementById(trackId);
+  if (!track) return;
+  const origItems = Array.from(track.children);
+  // Clone original set once and append
+  origItems.forEach(function(item) {
+    track.appendChild(item.cloneNode(true));
+  });
+}
+setupMarquee('galleryTrack');
+setupMarquee('reviewsTrack');
+
+// ---- BEFORE/AFTER SLIDERS ----
+document.querySelectorAll('.ba-slider').forEach(function(slider) {
+  var before = slider.querySelector('.ba-before');
+  var divider = slider.querySelector('.ba-divider');
+  var handle = slider.querySelector('.ba-handle');
+  var dragging = false;
+  function setPos(x) {
+    var r = slider.getBoundingClientRect();
+    var pct = Math.min(100, Math.max(0, (x - r.left) / r.width * 100));
+    before.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
+    divider.style.left = pct + '%';
+    handle.style.left = pct + '%';
+  }
+  slider.addEventListener('mousedown', function(e) { dragging = true; setPos(e.clientX); e.preventDefault(); });
+  slider.addEventListener('touchstart', function(e) { dragging = true; setPos(e.touches[0].clientX); }, { passive: true });
+  window.addEventListener('mousemove', function(e) { if (dragging) setPos(e.clientX); });
+  window.addEventListener('touchmove', function(e) { if (dragging) setPos(e.touches[0].clientX); }, { passive: true });
+  window.addEventListener('mouseup', function() { dragging = false; });
+  window.addEventListener('touchend', function() { dragging = false; });
+});
+
+// ---- NAVBAR SCROLL ----
+var navbar = document.getElementById('navbar');
+window.addEventListener('scroll', function() {
+  navbar.classList.toggle('scrolled', window.scrollY > 60);
+  document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 500);
+}, { passive: true });
+
+// ---- HAMBURGER ----
+var hbg = document.getElementById('hamburger'), mm = document.getElementById('mobileMenu');
+hbg.addEventListener('click', function() { hbg.classList.toggle('open'); mm.classList.toggle('open'); });
+document.querySelectorAll('.ml').forEach(function(l) {
+  l.addEventListener('click', function() { hbg.classList.remove('open'); mm.classList.remove('open'); });
+});
+
+// ---- PARALLAX HERO ----
+window.addEventListener('scroll', function() {
+  var y = window.scrollY;
+  if (y < window.innerHeight) document.getElementById('heroBg').style.transform = 'translateY(' + (y * 0.3) + 'px)';
+}, { passive: true });
+
+// ---- REVEAL ON SCROLL ----
+var obs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.stagger').forEach(function(el) { obs.observe(el); });
+
+// ---- SERVICES TABS ----
+function switchTab(tabId) {
+  // Update panels
+  document.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.remove('active'); });
+  var panel = document.getElementById(tabId);
+  if (panel) panel.classList.add('active');
+  // Update buttons
+  document.querySelectorAll('.tab-btn').forEach(function(btn) {
+    btn.classList.toggle('active', btn.getAttribute('data-tab') === tabId);
+  });
+  // Update select
+  var sel = document.getElementById('tabSelect');
+  if (sel) sel.value = tabId;
+}
+
+// ---- MODALS ----
+function openModal(id) {
+  var modal = document.getElementById(id);
+  if (modal) {
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+}
+function closeModal(id) {
+  var modal = document.getElementById(id);
+  if (modal) {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+function handleModalClick(e, id) {
+  // Close if clicking backdrop (not the box itself)
+  if (e.target.classList.contains('modal-overlay') || e.target.classList.contains('modal-backdrop')) {
+    closeModal(id);
+  }
+}
+// Close modals on Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.modal-overlay.open').forEach(function(m) {
+      m.classList.remove('open');
+    });
+    document.body.style.overflow = '';
+  }
+});
+
+// ---- PHONE VALIDATION ----
+(function() {
+  var p = document.getElementById('fphone');
+  if (!p) return;
+  p.addEventListener('input', function() {
+    var v = this.value.replace(/\D/g, '');
+    if (v.length > 9) v = v.substring(0, 9);
+    this.value = v;
+  });
+  p.addEventListener('keydown', function(e) {
+    if (['+', '-', '.', 'e', 'E'].includes(e.key)) e.preventDefault();
+  });
+})();
+
+// ---- SPIN KEYFRAME ----
+(function() {
+  var s = document.createElement('style');
+  s.textContent = '@keyframes spin{to{transform:rotate(360deg)}}';
+  document.head.appendChild(s);
+})();
+
+// ---- FORM SUBMIT ----
+function handleSubmit() {
+  var name = document.getElementById('fname').value.trim();
+  var phone = document.getElementById('fphone').value.trim();
+  var msg = document.getElementById('fmsg').value.trim();
+  if (!name) { alert('Proszę wpisać imię i nazwisko.'); return; }
+  if (!phone) { alert('Proszę wpisać numer telefonu.'); return; }
+  if (!msg) { alert('Proszę opisać zakres prac.'); return; }
+  var btn = document.getElementById('submitBtn');
+  btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18" style="animation:spin 0.8s linear infinite"><path d="M21 12a9 9 0 11-6.219-8.56"/></svg> Wysyłanie...';
+  btn.disabled = true;
+  setTimeout(function() {
+    document.getElementById('formContent').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  }, 1400);
+}
+
+// ---- SMOOTH SCROLL ----
+document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    var href = this.getAttribute('href');
+    if (!href || href === '#') return;
+    var t = document.querySelector(href);
+    if (t) { e.preventDefault(); window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - 76, behavior: 'smooth' }); }
+  });
+});
+
+// ---- RIPPLE ----
+document.querySelectorAll('.btn').forEach(function(btn) {
+  btn.addEventListener('click', function(e) {
+    var r = document.createElement('span');
+    var rect = this.getBoundingClientRect();
+    var s = Math.max(rect.width, rect.height) * 2;
+    r.style.cssText = 'position:absolute;width:' + s + 'px;height:' + s + 'px;left:' + (e.clientX - rect.left - s / 2) + 'px;top:' + (e.clientY - rect.top - s / 2) + 'px;background:rgba(255,255,255,0.2);border-radius:50%;transform:scale(0);animation:ripA 0.5s ease-out forwards;pointer-events:none';
+    this.appendChild(r);
+    setTimeout(function() { r.remove(); }, 500);
+  });
+});
+</script>
+</body>
+</html>
